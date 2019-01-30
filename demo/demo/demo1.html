@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color:lightcyan;
+  padding: 30px;
+   font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'left middle middle middle middle right'
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+}
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas:
+      'header header header header header header'
+      'left left left left left left'
+      'middle middle middle middle middle middle'
+      'right right right right right right'
+      'footer footer footer footer footer footer';
+  }
+}
+      ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+      .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: left;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+    text-align: left;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+</style>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <div class="grid-container">
+
+    <div class="header">
+        <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+         <i class="fa fa-shopping-cart" style="font-size:36px" align="right" color:red></i>
+        <h1>Bloom Flower Shop</h1><br></div></div>
+</head>
+<body>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="">News</a></li>
+  <li><a href="">Contact</a></li>
+  <li><a href="">About</a></li>
+
+</ul>
+
+    <h2> <a href="">Hydrebad</a></h2>
+<p> hyderbad is capital of telengana state. It is popular for biryani n historic places of kutubshah empires.. </p>
+<p> It has beatiful near by visiting places like shilpawaran,nagarjun sagar dam, shreesailam</p>
+</div>
+
+<div class="cite">
+<h2> pune</h2>
+<p> hyderbad is capital of telengana state. It is popular for biryani n historic places of kutubshah empires.. </p>
+<p style="grid-column: auto"> It has beatiful near by visiting places like shilpawaran,nagarjun sagar dam, shreesailam</p>
+</div>
+</body>
+</html>
